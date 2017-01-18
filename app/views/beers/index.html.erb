@@ -1,0 +1,17 @@
+<h1>Add a new beer</h1>
+<%= simple_form_for @beer do |f| %>
+  <%= f.input :name %>
+  <%= f.input :brewery %>
+  <%= f.input :style %>
+  <%= f.submit 'Create', class: 'btn btn-danger' %>
+<% end %>
+
+<% @beers.each do |beer| %>
+  <div>
+    <h1><%= beer.name %></h1><br />
+    <i><%= beer.brewery %></i><br />
+    <p><%= beer.style %></p><br />
+  </div>
+
+  <hr />
+<% end %>
